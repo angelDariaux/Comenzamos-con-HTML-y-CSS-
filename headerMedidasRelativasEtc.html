@@ -3,29 +3,88 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
    <title>Header</title>
 </head>
 <style>
    body {
       margin: 0px;
+      font-family: 'muli', sans-serif;
+      background-color: #AB88FF;
    }
 
-   header {
-      background-color: #21c08b;
+   .header {
+      background-color: #ab88ff;
       width: 100%;
       height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
    }
    
-   header img {
+   .header__img {
       width: 200px;
       margin-top: 10px;
       margin-left: 10px;
    }
 
+   .header__menu {
+      margin-right: 30px;
+   }
+
+   .header__menu ul {
+      display: none; /* aqui no se muestra el submenu */
+      list-style: none; /*elimina los puntos de ul*/
+      padding: 0px;
+      position: absolute;
+      text-align: right;
+      margin: 0px 0px 0px -14px;
+   }
+
+   .header__menu:hover ul, ul:hover{
+      display: block; /* aqui al posicionar el mouse se muestra el submenu */
+   }
+
+   .header__menu li {
+      color: white;
+      text-decoration: none; /* con esto le quitamos el subrayado al link */
+      margin: 10px 0px; /* 10px arriba, abajo 0px izquierda, derecha */
+   }
+
+   .header__menu li a:hover {
+      text-decoration: underline;
+   }
+
+   .header__menu--profile {
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+   }
+
+   .header__menu--profile p{
+      margin: 0px;
+      color: white;
+   }
+
+   .header__menu--profile img{
+      margin-right: 8px;
+      width: 40px;
+   }
+
 </style>
 <body>
-   <header>
-      <img src="/home/angel/platProgramador/frontEndDeveloper/imagen1/logo-platzi-video-BW2.png" alt="">
+   <header class="header">
+      <img class="header__img" src="/home/angel/platProgramador/frontEndDeveloper/imagen1/logo-platzi-video-BW2.png" alt="">
+      <div class="header__menu">
+         <div class="header__menu--profile">
+            <img src="./imagen1/userIcon.png" alt="iconoUsuario">
+            <p>perfil</p>
+         </div>
+         <ul>
+            <li><a href="/"></a>cuenta</li>
+            <li><a href="/"></a>cerrar sesion</li>
+         </ul>
+      </div>
    </header>
 </body>
 </html>

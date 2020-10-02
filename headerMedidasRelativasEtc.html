@@ -10,11 +10,11 @@
    body {
       margin: 0px;
       font-family: 'muli', sans-serif;
-      background-color: #AB88FF;
+      background-color: #8f57fd;
    }
 
    .header {
-      background-color: #ab88ff;
+      background-color: #8f57fd;
       width: 100%;
       height: 80px;
       display: flex;
@@ -71,6 +71,32 @@
       width: 40px;
    }
 
+   .main {
+      height: 300px;
+   }
+
+   .main__title {
+      color: #ffffff;
+      font-size: 25px;
+   }
+
+   .input {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      border-radius: 25px;
+      color: white;
+      font-family: 'muli', sans-serif;
+      font-size: 16px;
+      height: 50px;
+      padding: 0px 20px;
+      width: 70%;
+      outline: none;/* con esto le quitamos el outline cuando damos click en el input */
+   }
+
+   ::placeholder { /* con este pseudo elemento le damos el color a las letras del texto en el input */
+      color: white;
+   }
+
 </style>
 <body>
    <header class="header">
@@ -86,5 +112,9 @@
          </ul>
       </div>
    </header>
+   <section class="main">
+      <h2 class="main__title">Que quieres ver hoy?</h2>
+      <input class="input" type="text" placeholder="Buscar..."> <!-- placeholder no es para poner texto en el buscador -->
+   </section>
 </body>
 </html>

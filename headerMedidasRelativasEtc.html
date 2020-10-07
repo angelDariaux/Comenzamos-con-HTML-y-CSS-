@@ -4,100 +4,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="./styles.css">
    <title>Header</title>
 </head>
-<style>
-   body {
-      margin: 0px;
-      font-family: 'muli', sans-serif;
-      background-color: #8f57fd;
-   }
-
-   .header {
-      background-color: #8f57fd;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
-   
-   .header__img {
-      width: 200px;
-      margin-top: 10px;
-      margin-left: 10px;
-   }
-
-   .header__menu {
-      margin-right: 30px;
-   }
-
-   .header__menu ul {
-      display: none; /* aqui no se muestra el submenu */
-      list-style: none; /*elimina los puntos de ul*/
-      padding: 0px;
-      position: absolute;
-      text-align: right;
-      margin: 0px 0px 0px -14px;
-   }
-
-   .header__menu:hover ul, ul:hover{
-      display: block; /* aqui al posicionar el mouse se muestra el submenu */
-   }
-
-   .header__menu li {
-      color: white;
-      text-decoration: none; /* con esto le quitamos el subrayado al link */
-      margin: 10px 0px; /* 10px arriba, abajo 0px izquierda, derecha */
-   }
-
-   .header__menu li a:hover {
-      text-decoration: underline;
-   }
-
-   .header__menu--profile {
-      margin-right: 8px;
-      display: flex;
-      align-items: center;
-   }
-
-   .header__menu--profile p{
-      margin: 0px;
-      color: white;
-   }
-
-   .header__menu--profile img{
-      margin-right: 8px;
-      width: 40px;
-   }
-
-   .main {
-      height: 300px;
-   }
-
-   .main__title {
-      color: #ffffff;
-      font-size: 25px;
-   }
-
-   .input {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 2px solid white;
-      border-radius: 25px;
-      color: white;
-      font-family: 'muli', sans-serif;
-      font-size: 16px;
-      height: 50px;
-      padding: 0px 20px;
-      width: 70%;
-      outline: none;/* con esto le quitamos el outline cuando damos click en el input */
-   }
-
-   ::placeholder { /* con este pseudo elemento le damos el color a las letras del texto en el input */
-      color: white;
-   }
-
-</style>
 <body>
    <header class="header">
       <img class="header__img" src="/home/angel/platProgramador/frontEndDeveloper/imagen1/logo-platzi-video-BW2.png" alt="">
@@ -112,9 +21,35 @@
          </ul>
       </div>
    </header>
+   <section class="login">
+      <section class="login__container">
+         <h2>Inicia sesión</h2>
+         <form class="login__container--form">
+            <input class="input" type="text" placeholder="correo">
+            <input class="input" type="password" placeholder="contraseña">
+            <button class="button">Iniciar sesión</button>
+            <div class="login__container--remember-me">
+               <label>
+                  <input type="checkbox" id="cbox1" value="checkbox"> Recuerdame
+               </label>
+               <a href="/">olvidé mi contraseña</a>
+            </div>
+         </form>
+         <section class="login__container--social-media">
+            <div><img src="./imagen1/google-logo.png" width="20px" height="20px" alt="google">Inicia sesión con Google</div>
+            <div><img src="./imagen1/descarga.png" width="20px" height="20px" alt="twitter">Inicia sesión con twitter</div>
+         </section>
+         <p class="login__container--register">No tienes ninguna cuenta <a href=#>registrate</a></p>
+      </section>
+   </section>
    <section class="main">
       <h2 class="main__title">Que quieres ver hoy?</h2>
       <input class="input" type="text" placeholder="Buscar..."> <!-- placeholder no es para poner texto en el buscador -->
    </section>
+   <footer class="footer">
+      <a href="/">Términos de uso</a>
+      <a href="/">Declaración de privacidad</a>
+      <a href="/">Centro de ayuda</a>
+   </footer>
 </body>
 </html>

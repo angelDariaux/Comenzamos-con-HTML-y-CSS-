@@ -91,6 +91,9 @@ body {
    padding: 60px 68px 40px;
    min-height: 700px;
    width: 300px;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column; /* con estas ultimas 3 letras dejamos bien espaciado y alineado el texto en el inico de sesion */
 }
 .login__container--form {
    display: flex;
@@ -118,4 +121,78 @@ body {
    align-items: center;
    font-size: 14px;
    margin-bottom: 10px;
+}
+.login__container--social-media > div > img { /* con esto: > div toma todos los div y los estiliza */
+   width: 30px;
+   height: 30px;
+   margin-right: 10px;
+}
+.login__container--register {
+   font-size: 14px;
+}
+.login__container--register a {
+   color: white;
+   font-weight: bold;
+   font-size: 16px;
+   text-decoration: none;
+}
+.login__container--register a:hover {
+   text-decoration: underline;
+}
+input {
+   background-color: transparent;
+   border-left: 0px;
+   border-top: 0px;
+   border-right: 0px;
+   border-bottom: 2px solid white;
+   font-size: 16px;
+   font-family: 'muli', sans-serif;
+   margin-bottom: 20px;
+   padding: 0px 20px;
+   outline: none;
+}
+::placeholder {
+   color: white;
+}
+.button {
+   background-color: rgba(255, 255, 255, 0.1);
+   border: none;
+   border-radius: 25px;
+   color: white;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: 'muli', sans-serif;
+   height: 50px;
+   letter-spacing: 1px; /* con esto le damos espacio entre letras */
+   margin: 10px 0px;
+}
+.footer {
+   background: #ab88ff;
+   display: flex;
+   align-items: center;
+   height: 100px;
+   width: 100%;
+}
+.footer a {
+   color: white;
+   cursor: pointer;
+   font-size: 14px;
+   padding-left: 30px;
+   text-decoration: none;
+}
+.footer a:hover {
+   text-decoration: underline;
+}
+@media only screen and (max width: 600px) {
+   .login__container {
+      background-color: transparent;
+      border: none;
+      padding: 0px;
+      width: 100%;
+   }
+   .footer {
+      align-items: flex-start;
+      flex-direction: column;
+   }
 }

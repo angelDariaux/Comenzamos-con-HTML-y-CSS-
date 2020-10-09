@@ -112,7 +112,8 @@ hello = () => "Hello World!";
 //https://www.w3schools.com/js/js_conventions.asp
 //https://www.w3schools.com/js/js_best_practices.asp
 //https://www.w3schools.com/js/js_mistakes.asp
-
+//https://www.w3schools.com/js/js_reserved.asp
+//https://www.w3schools.com/js/js_json.asp
 //https://www.w3schools.com/js/js_object_definition.asp si entiendes los objetos entiendes java script
 
       //objeto literal//
@@ -121,8 +122,48 @@ var angel = {
    apellido: 'Hernandez',
    edad: 24
 };
-      //objeto usando 'new' keyword//
+      //objeto usando 'new' keyword NO RECOMENDABLE ES MEJOR EL OBJETO LITERAL//
 var persona = new Object();
    persona.primerNombre = 'Angel';
    persona.apellido = 'Hernandez';
    persona.edad = 24;
+
+//https://www.w3schools.com/js/js_object_properties.asp
+
+/* Properties are the most important part of any JavaScript object.
+
+JavaScript Properties
+Properties are the values associated with a JavaScript object.
+
+A JavaScript object is a collection of unordered properties.
+
+Properties can usually be changed, added, and deleted, 
+but some are read only. */
+
+/* se puede acceder a las propiedades asi: */
+
+var person = {
+      firstname:"John",
+      lastname:"Doe",
+      age:50,
+      eyecolor:"blue"
+    };
+
+    person.firstname + " is " + person.age + "years old"
+
+/* o se puede hacer asi: */
+
+person["firstname"] + " is " + person["age"] + "years old"
+
+/* JavaScript for...in Loop
+The JavaScript for...in statement loops through the properties of an object. */
+
+
+
+
+
+
+
+
+
+
